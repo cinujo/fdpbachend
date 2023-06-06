@@ -5,6 +5,8 @@ import Home from './components/Home';
 import AddEmployee from './components/AddEmployee';
 import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom';
+import ViewEmp from './components/ViewEmp';
+import Add from './components/Add';
 
 function App() {
   return (
@@ -16,8 +18,9 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/add' element={<AddEmployee/>}/>
-        <Route path='/view' element={<View/>}/>
+        <Route path='/add' element={<Add data={{sname:'',age:'',pos:'',salary:''}}method = 'post'/>}/>
+
+        <Route path='/view' element={<ViewEmp/>}/>
       </Routes>
     </div>
   );
